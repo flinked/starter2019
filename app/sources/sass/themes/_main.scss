@@ -1,0 +1,16 @@
+
+//layout
+@import 'layout/_body.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+@import 'layout/_form.scss';
+
+
+// home view
+@import 'views/home/_main.scss';
+
+// about view
+@import 'views/about/_main.scss';
+
+// composant
+@import 'components/_title.scss';

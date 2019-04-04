@@ -1,0 +1,6 @@
+object-fit: contain;
+
+@mixin obj($size: cover, $hozitonal: center, $vertical: center) {
+    object-fit: $size;
+    object-position: $hozitonal $vertical;
+}

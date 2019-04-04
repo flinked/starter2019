@@ -1,0 +1,203 @@
+
+.gform_wrapper {
+  margin-top: 0 !important;
+}
+
+.gfield_required {
+  display: none !important;
+}
+
+
+.gform_fields {
+  @include flex($justify: flex-start);
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+li.gfield  {
+  width: 100% !important;
+  margin-top: 19px !important;
+}
+
+#field_1_6,
+#field_1_3,
+#field_1_2 {
+  width: calc(50% - 10px) !important;
+  @include small {
+    width: 100% !important;
+  }
+}
+
+#field_1_2 {
+  margin-right: 20px !important;
+  @include small {
+    margin-right: 0px !important;
+  }
+}
+
+#input_1_5_6_container {
+  label {
+    display: none;
+  }
+}
+
+.gfield_label {
+  display: none !important;
+}
+
+.ginput_container {
+  width: 100% !important;
+  margin-top: 0 !important;
+  textarea,
+  input {
+    border: 1px solid #D5D5D5 !important;
+    padding: 19px 29px !important;
+    font-size: 18px !important;
+    // font-weight: $medium !important;
+    color: getColor(black) !important;
+    // opacity: 0.58 !important;
+    width: 100% !important;
+    margin-bottom: 0px !important;
+    border-radius: 5px;
+  }
+}
+
+.gform_button {
+
+  font-family: $font !important;
+  font-weight: $heavy !important;
+  font-size: 16px !important;
+  color: #FFFFFF !important;
+  text-align: center !important;
+  display: inline-block !important;
+  padding-top: 14px !important;
+  padding-bottom: 15px !important;
+  padding-left: 41px !important;
+  padding-right: 41px !important;
+  background: #45C6FF !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  -webkit-transition: .3s ease-in-out !important;
+  transition: .3s ease-in-out !important;
+  height: 44px !important;
+  @include flex();
+  display: flex !important;
+  margin: 0 11.5px !important;
+}
+
+.gform_footer.top_label {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: center !important;
+  margin-top: 62px !important;
+}
+
+
+// error
+
+body img.gform_ajax_spinner {
+  display: none !important;
+}
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background-color: transparent !important;
+  margin-bottom: 0px!important;
+  border-top: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  box-sizing: !important;
+}
+
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+  border: none !important;
+  border: 1px solid red !important;
+}
+
+.contact {
+  .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    margin-bottom: 0 !important;
+  }
+}
+
+.validation_error {
+  display: none !important;
+}
+
+.gfield_description.validation_message {
+  display: none !important;
+}
+
+
+// validate
+
+.contact__form__validation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba( 255, 255, 255, 0.39);
+  @include flex();
+}
+
+.contact__form__validationCards {
+  position: relative;
+  width: 737px;
+  height: 547px;
+  padding: 130px 0 113px 0;
+  background: #52D6B1;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 0px rgba(255,255,255, 0.5);
+  overflow: hidden;
+  @include flex();
+  @include small {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 0;
+    &::after {
+      bottom: initial;
+      right: 40px;
+      top: 30px;
+    }
+  }
+}
+
+.contact__form__valudationContent {
+  width: 375px;
+  max-width: 100%;
+  @include small {
+    margin-top: 100px;
+  }
+}
+
+.contact__form__valudationTitle {
+  color: getColor(white);
+  font-size: 46px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.contact__form__valudationText {
+  color: getColor(white);
+  font-size: 16px;
+}
+
+.contact__form__valudationBtn {
+  margin-top: 50px;
+}
+
+.contact__form__validationCross {
+  position: absolute;
+  top: 91px;
+  right: 103px;
+  width: 21px;
+  height: 21px;
+  @include small {
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+}
