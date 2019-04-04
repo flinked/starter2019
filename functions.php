@@ -5,6 +5,7 @@ define( 'THEME_URL' ,           get_template_directory_uri()        );
 define( 'CSS_URL' ,             THEME_URL .    '/public/assets/stylesheet/'  );
 define( 'IMAGES_URL' ,          THEME_URL .    '/public/assets/image/'       );
 define( 'JS_URL' ,              THEME_URL .    '/public/assets/javascript/'  );
+define( 'PUBLIC_URL' ,              THEME_URL .    '/public'  );
 
 // LOADING CORE FILES
 $folders = array( 'environment', 'postType', 'function', 'ajax' );

@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "utile": "sh sh/utilePanel.sh",
-    "components": "sh sh/utilePanel.sh",
-    "page": "sh sh/createPages.sh",
-    "section": "sh sh/createSection.sh"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +14,7 @@
     "browser-sync": "^2.18.5",
     "browserify": "^13.1.1",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
     "gulp-cssnano": "^2.1.2",
@@ -25,14 +22,16 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
-    "watchify": "^3.8.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^2.0.0",
-    "gulp-autoprefixer": "^6.0.0"
+    "watchify": "^3.8.0"
   },
   "dependencies": {
     "@babel/preset-stage-2": "^7.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "smooth-scrollbar": "^8.3.1"
+    "gulp-inject": "^5.0.2",
+    "smooth-scrollbar": "^8.3.1",
+    "stylelint": "^9.10.1",
+    "stylelint-scss": "^3.5.4"
   }
 }

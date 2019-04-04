@@ -121,7 +121,7 @@ gulp.task('watch', function() {
 })
 
 
-gulp.task('build', gulp.series (gulp.parallel('build-scripts', 'build-styles', 'remove-maps'),
+gulp.task('build', gulp.series (gulp.parallel('build-scripts', 'build-styles'),
     function (done) {
         return gulp.src( './' )
         .pipe( gulp_notify( {
