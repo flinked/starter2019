@@ -7,7 +7,6 @@ function init() {
   // useful.coords()
   // console.log(useful.mobile())
   // useful.resize()
-
 }
 
 

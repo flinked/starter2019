@@ -1,2 +1,13 @@
+// @import "resource/_main.scss";
+// @import "themes/_main.scss";
+
+/* inject:imports */
+/* endinject */
+
 @import "resource/_main.scss";
-@import "themes/_main.scss";
+@import "themes/*.scss";
+@import "themes/views/**/**/*.scss";
+@import "../../views/global/**/**/*.scss";
+@import "../../views/components/**/**/*.scss";
+@import "../../views/layout/**/**/*.scss";
+@import "../../views/pages/**/**/*.scss";

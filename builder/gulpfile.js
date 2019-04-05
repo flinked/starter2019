@@ -14,6 +14,7 @@ let gulp         = require( 'gulp' ),
     sourcemaps   = require( 'gulp-sourcemaps' ),
     watchify     = require( 'watchify' );
     autoprefixer = require('gulp-autoprefixer');
+    sassGlob     = require('gulp-sass-glob');
 
 /**
  * Params
@@ -69,6 +70,7 @@ gulp.task( 'scripts', function()
 gulp.task( 'styles', function()
 {
     return gulp.src( '../app/sources/sass/main.scss' )
+        .pipe(sassGlob())
         .pipe( gulp_sass( {
             compress: false
         } ) )
@@ -117,7 +119,7 @@ gulp.task( 'remove-maps', function()
 // }
 
 gulp.task('watch', function() {
-    gulp.watch( '../app/sources/sass/**', gulp.series('styles') )
+    gulp.watch( '../app/**', gulp.series('styles') )
 })
 
 
