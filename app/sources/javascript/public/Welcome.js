@@ -5,7 +5,7 @@ class Welcome
      */
     constructor( options )
     {
-
+        
     }
 
     init() {
