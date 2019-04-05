@@ -282,7 +282,7 @@ function init() {
     // useful.autoScroll()
     // useful.coords()
     // console.log(useful.mobile())
-    // useful.resize()
+    // useful.resize();
 }
 
 window.onload = init;
