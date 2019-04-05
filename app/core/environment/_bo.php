@@ -76,3 +76,13 @@ function dequeue_gf_stylesheets() {
     wp_dequeue_style( 'gforms_ready_class_css' );
     wp_dequeue_style( 'gforms_browsers_css' );
 }
+
+function admin_style() {
+	wp_enqueue_style('admin-styles', get_template_directory_uri().'/public/bo/bo.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+function custom_login_css()  {
+    echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/public/bo/login.css" />';
+}
+add_action('login_head', 'custom_login_css');

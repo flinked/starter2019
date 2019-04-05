@@ -132,7 +132,9 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/timber-library.1.9.4.zip"
+            "url": "https://downloads.wordpress.org/plugin/timber-library.1.9.4.zip",
+            "reference": null,
+            "shasum": null
         },
         "require": {
             "composer/installers": "~1.0"

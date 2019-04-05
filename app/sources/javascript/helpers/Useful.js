@@ -1,8 +1,8 @@
 
 import AutoScroll from './AutoScroll'
-import Coords from './Coords';
-import CheckMobile from './CheckMobile';
-import ResizeEvent from './ResizeEvent';
+import Coords from './Coords'
+import CheckMobile from './CheckMobile'
+import ResizeEvent from './ResizeEvent'
 
 class Useful
 {

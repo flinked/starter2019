@@ -1,7 +1,7 @@
 /**
  * Dependencies
  */
-let gulp         = require( 'gulp' ),
+const gulp         = require( 'gulp' ),
     browserify   = require( 'browserify' ),
     babelify     = require( 'babelify' ),
     source       = require( 'vinyl-source-stream' ),
@@ -12,9 +12,10 @@ let gulp         = require( 'gulp' ),
     gulp_uglify  = require( 'gulp-uglify' ),
     gulp_notify  = require( 'gulp-notify' ),
     sourcemaps   = require( 'gulp-sourcemaps' ),
-    watchify     = require( 'watchify' );
-    autoprefixer = require('gulp-autoprefixer');
-    sassGlob     = require('gulp-sass-glob');
+    watchify     = require( 'watchify' ),
+    autoprefixer = require('gulp-autoprefixer'),
+    eslint       = require('gulp-eslint'),
+    sassGlob     = require('gulp-sass-glob')
 
 /**
  * Params
@@ -46,12 +47,12 @@ gulp.task( 'scripts', function()
 {
     // Create bundler
     bundler = browserify( {
-            cache       : {},
-            packageCache: {},
-            entries     : '../app/sources/javascript/index.js',
-            debug       : true,
-            paths       : [ './node_modules', '../app/sources/javascript' ]
-        } )
+        cache       : {},
+        packageCache: {},
+        entries     : '../app/sources/javascript/index.js',
+        debug       : true,
+        paths       : [ './node_modules', '../app/sources/javascript' ]
+    } )
         .transform( 'babelify', { presets: [ 'babel-preset-es2015' ].map( require.resolve ) } )
 
     // Watch
@@ -113,6 +114,18 @@ gulp.task( 'remove-maps', function()
         .pipe( gulp_clean( { force: true, read: false } ) )
 } )
 
+gulp.task('lint', () => {
+    return gulp.src(['.eslintrc'])
+        // eslint() attaches the lint output to the "eslint" property
+        // of the file object so it can be used by other modules.
+        .pipe(eslint())
+        // eslint.format() outputs the lint results to the console.
+        // Alternatively use eslint.formatEach() (see Docs).
+        .pipe(eslint.format())
+        // To have the process exit with an error code (1) on
+        // lint error, return the stream and pipe to failAfterError last.
+        .pipe(eslint.failAfterError())
+})
 
 // function watchFile() {
 //     gulp.watch( '../app/sources/sass/**', ['styles'] )
@@ -126,13 +139,13 @@ gulp.task('watch', function() {
 gulp.task('build', gulp.series (gulp.parallel('build-scripts', 'build-styles'),
     function (done) {
         return gulp.src( './' )
-        .pipe( gulp_notify( {
-            title  : 'Gulp: build',
-            message: 'success'
-        } ) )
+            .pipe( gulp_notify( {
+                title  : 'Gulp: build',
+                message: 'success'
+            } ) )
     }
-));
+))
 
 gulp.task('default', gulp.series (gulp.parallel('styles', 'scripts', 'watch'),
     function (done) { }
-));
+))
