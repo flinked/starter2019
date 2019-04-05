@@ -7,7 +7,7 @@ function init() {
     // useful.coords()
     // console.log(useful.mobile())
     // useful.resize()
-    useful.ConsolSignature()
+    useful.printConsol()
 }
 
 window.onload = init

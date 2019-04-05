@@ -1,6 +1,7 @@
 class ConsolSignature
 {
     printConsol() {
+        
         console.log(
             '%c                                                                           ' + '\n' +
             '                                                                           ' + '\n' +
