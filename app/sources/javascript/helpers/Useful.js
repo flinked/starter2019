@@ -3,6 +3,7 @@ import AutoScroll from './AutoScroll'
 import Coords from './Coords'
 import CheckMobile from './CheckMobile'
 import ResizeEvent from './ResizeEvent'
+import ConsolSignature from './ConsolSignature'
 
 class Useful
 {
@@ -25,6 +26,16 @@ class Useful
     resize() {
         let resizeEvent = new ResizeEvent
         return resizeEvent.init()
+    }
+
+    print() {
+        let resizeEvent = new ResizeEvent
+        return resizeEvent.init()
+    }
+
+    printConsol() {
+        let consolSignature = new ConsolSignature
+        return consolSignature.init()
     }
 }
 

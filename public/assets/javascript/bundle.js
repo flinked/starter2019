@@ -117,6 +117,39 @@ var CheckMobile = function () {
 exports.default = CheckMobile;
 
 },{}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ConsolSignature = function () {
+    function ConsolSignature() {
+        _classCallCheck(this, ConsolSignature);
+    }
+
+    _createClass(ConsolSignature, [{
+        key: 'printConsol',
+        value: function printConsol() {
+            console.log('%c                                                                           ' + '\n' + '                                                                           ' + '\n' + '                                                                           ' + '\n' + '                                                                           ' + '\n' + '    ________ ___       ___  ________   ___  __    _______   ________       ' + '\n' + '   |\\  _____\\\\  \\     |\\  \\|\\   ___  \\|\\  \\|\\  \\ |\\  ___ \\ |\\   ___ \\      ' + '\n' + '   \\ \\  \\__/\\ \\  \\    \\ \\  \\ \\  \\\\ \\  \\ \\  \\/  /|\\ \\   __/|\\ \\  \\_|\\ \\     ' + '\n' + '    \\ \\   __\\\\ \\  \\    \\ \\  \\ \\  \\\\ \\  \\ \\   ___  \\ \\  \\_|/_\\ \\  \\ \\\\ \\    ' + '\n' + '     \\ \\  \\_| \\ \\  \\____\\ \\  \\ \\  \\\\ \\  \\ \\  \\\\ \\  \\ \\  \\_|\\ \\ \\  \\_\\\\ \\   ' + '\n' + '      \\ \\__\\   \\ \\_______\\ \\__\\ \\__\\\\ \\__\\ \\__\\\\ \\__\\ \\_______\\ \\_______\\  ' + '\n' + '       \\|__|    \\|_______|\\|__|\\|__| \\|__|\\|__| \\|__|\\|_______|\\|_______|  ' + '\n' + '                                                                           ' + '\n' + '                                                                           ' + '\n' + '                                                                           ' + '\n' + '    Developed by : Alexis B. & Timothee H.                                 ' + '\n' + '                                                                           ' + '\n' + '                                                                           ' + '\n' + '                                                                           ', 'background: #000; color: #477DF6; font-weight: 900;');
+        }
+    }, {
+        key: 'init',
+        value: function init() {
+            this.printConsol();
+        }
+    }]);
+
+    return ConsolSignature;
+}();
+
+exports.default = ConsolSignature;
+
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -158,7 +191,7 @@ var Coords = function () {
 
 exports.default = Coords;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -202,7 +235,7 @@ var ResizeEvent = function () {
 
 exports.default = ResizeEvent;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -226,6 +259,10 @@ var _CheckMobile2 = _interopRequireDefault(_CheckMobile);
 var _ResizeEvent = require('./ResizeEvent');
 
 var _ResizeEvent2 = _interopRequireDefault(_ResizeEvent);
+
+var _ConsolSignature = require('./ConsolSignature');
+
+var _ConsolSignature2 = _interopRequireDefault(_ConsolSignature);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -260,6 +297,18 @@ var Useful = function () {
             var resizeEvent = new _ResizeEvent2.default();
             return resizeEvent.init();
         }
+    }, {
+        key: 'print',
+        value: function print() {
+            var resizeEvent = new _ResizeEvent2.default();
+            return resizeEvent.init();
+        }
+    }, {
+        key: 'printConsol',
+        value: function printConsol() {
+            var consolSignature = new _ConsolSignature2.default();
+            return consolSignature.init();
+        }
     }]);
 
     return Useful;
@@ -267,7 +316,7 @@ var Useful = function () {
 
 exports.default = Useful;
 
-},{"./AutoScroll":1,"./CheckMobile":2,"./Coords":3,"./ResizeEvent":4}],6:[function(require,module,exports){
+},{"./AutoScroll":1,"./CheckMobile":2,"./ConsolSignature":3,"./Coords":4,"./ResizeEvent":5}],7:[function(require,module,exports){
 'use strict';
 
 var _Useful = require('./helpers/Useful');
@@ -283,10 +332,11 @@ function init() {
     // useful.coords()
     // console.log(useful.mobile())
     // useful.resize()
+    useful.ConsolSignature();
 }
 
 window.onload = init;
 
-},{"./helpers/Useful":5}]},{},[6])
+},{"./helpers/Useful":6}]},{},[7])
 
 //# sourceMappingURL=bundle.js.map
