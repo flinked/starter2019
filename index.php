@@ -3,12 +3,10 @@
  * The template for displaying all pages
  */
 
-get_header(); ?>
+$context = Timber::context();
+$timber_post = new Timber\Post();
+$context['post'] = $timber_post;
+$context['foo'] = 'bar';
+$templates = array( 'views/pages/global/index.twig' );
 
-<div class="wrap">
-
-		<?php the_content();?>
-
-</div><!-- .wrap -->
-
-<?php get_footer();
+  Timber::render( $templates, $context );
