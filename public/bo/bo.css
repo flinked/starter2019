@@ -142,14 +142,14 @@ background-color: #4D7DED !important;
 
 /* layout */
 
-.postbox,
+/* .postbox,
 .welcome-panel {
     -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
     -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
     border: none;
     padding: 12px;
-}
+} */
 
 .postbox .button {
     background: #414241 !important;
@@ -167,23 +167,23 @@ background-color: #4D7DED !important;
     margin-top: 30px;
 }
 
-.wp-list-table {
+/* .wp-list-table {
     -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
     -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
     margin: 30px 0;
-}
+} */
 
 #update-nag, .update-nag {
     border-left: 4px solid #4D7DED;
 }
 
-#post-body-content,
+/* #post-body-content,
 #acf-field-group-fields {
     -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
     -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
-}
+} */
 
 #post-body-content input {
     border: none !important;
