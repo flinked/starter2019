@@ -12,7 +12,7 @@
 				{% block header %}
 					<div class="header__wrapper">
 						<nav class="header__nav" role="navigation">
-							{% include "views/layout/menu.twig" with {'menu': menu.get_items} %}
+							{% include "views/layout/menu/menu.twig" with {'menu': menu.get_items} %}
 						</nav>
 					</div>
 				{% endblock %}
@@ -28,7 +28,7 @@
 			{% block footer %}
 				<footer class="footer">
 					<div class="footer__wrapper">
-						{% include 'views/layout/footer.twig' %}
+						{% include 'views/layout/footer/footer.twig' %}
 					</div>
 				</footer>
 				{{ function('wp_footer') }}
