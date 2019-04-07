@@ -220,3 +220,11 @@ background-color: #4D7DED !important;
     background: transparent !important;
 } */
 
+#wp-admin-bar-wp-logo {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+#wpwrap .customdashwidget h2 {
+    color: #414241 !important;
+}

@@ -1,5 +1,5 @@
 body.login {
-    background: #001DF5 !important;
+    background: #FFF !important;
     display: flex;
 }
 
@@ -8,15 +8,15 @@ body.login {
 }
 
 h1 a{
-    background: url(../image/logo.svg) no-repeat !important;
-    width: 325px !important;
-    height: 70px !important;
+    background: url(./flinked.svg) no-repeat !important;
+    width: 300px !important;
+    height: 45px !important;
     background-position: center !important;
     background-size: contain !important;
 }
 
 #backtoblog {
-    background-color: #F5F5F5;
+    background-color: #4D7DED;
     left: 0;
     margin: 0 !important;
     padding: 10px !important;
@@ -28,7 +28,7 @@ h1 a{
 }
 
 .login #backtoblog a {
-    color: #001DF5 !important;
+    color: #FFF !important;
 }
 
 .wp-core-ui .button.button-large  {
@@ -45,7 +45,7 @@ h1 a{
     letter-spacing: 0.3px !important;
     cursor: pointer !important;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
-    background-color: #001DF5 !important;
+    background-color: #4D7DED !important;
     color: #fff !important;
     border: none !important;
     box-shadow: none !important;
