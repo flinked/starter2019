@@ -47,7 +47,10 @@ function createFile(folder, file, fields) {
 
   if (!fs.existsSync(`${baseFile}${folder}/${folder}-${file}`)){
     fs.mkdirSync(`${baseFile}${folder}/${folder}-${file}`);
-    includeArray.file[folder].push(`${folder}-${file}`);
+    if (!fs.existsSync(`${baseFile}${folder}/${folder}.twig`)){
+      includeArray.file[folder].push(`${folder}-${file}`);
+    }
+
   }
 
   if (!fs.existsSync(`${baseFile}${folder}/${folder}-${file}/${folder}-${file}.twig`)){
@@ -55,8 +58,6 @@ function createFile(folder, file, fields) {
       if (err) throw err;
       parseField(fields, {folder: folder, file: file } )
     });
-  } else {
-    parseField(fields, {folder: folder, file: file } )
   }
 
   if (!fs.existsSync(`${baseFile}${folder}/${folder}-${file}/_${folder}-${file}.scss`)){
@@ -176,7 +177,7 @@ function writeFile(stringToInclude, folder) {
   if (fs.existsSync(`${baseFile}${folder.folder}/${folder.folder}-${folder.file}/${folder.folder}-${folder.file}.twig`)){
     fs.appendFile(`${baseFile}${folder.folder}/${folder.folder}-${folder.file}/${folder.folder}-${folder.file}.twig`, stringToInclude + os.EOL, function (err) {
       if (err) throw err;
-      console.log('Saved!', folder);
+      console.log('Finish', folder.folder + '-' + folder.file);
     });
   }
 }
