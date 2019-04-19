@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generateacf": "cd generator/script && node acf.js"
+    "generateacf": "cd generator/script && node acf.js",
+    "component": "cd generator/script && node components.js",
+    "layout": "cd generator/script && node layout.js"
   },
   "author": "",
   "license": "ISC",
