@@ -1,0 +1,21 @@
+{
+  "js": [
+    {
+      "name": "DropDown.js",
+      "folder": "js",
+      "type": "javascript"
+    },
+    {
+      "name": "ScrollMenu.js",
+      "folder": "js",
+      "type": "javascript"
+    }
+  ],
+  "scss": [
+    {
+      "name": "easing.scss",
+      "folder": "scss",
+      "type": "style"
+    }
+  ]
+}
