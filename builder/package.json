@@ -31,7 +31,8 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.1"
   },
   "dependencies": {
     "@babel/preset-stage-2": "^7.0.0",

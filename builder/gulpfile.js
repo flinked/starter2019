@@ -26,11 +26,23 @@ const gulp         = require( 'gulp' ),
 /**
  * Scripts bundle
  */
-let bundler = null
+let bundlerInit = null
 
 const bundle = function()
 {
     bundler.bundle()
+        .on( 'error', gulp_notify.onError( { title: 'Gulp: scripts' } ) )
+        .pipe( source( 'bundle.js' ) )
+        .pipe( buffer() )
+        .pipe( sourcemaps.init( { loadMaps: true } ) )
+        .pipe( sourcemaps.write( './' ) )
+        .pipe( gulp.dest( '../public/assets/javascript' ) )
+        .pipe( gulp_notify( { title: 'Gulp: scripts', message: 'success' } ) )
+}
+
+const bundleInit = function()
+{
+    bundlerInit.bundle()
         .on( 'error', gulp_notify.onError( { title: 'Gulp: scripts' } ) )
         .pipe( source( 'bundle.js' ) )
         .pipe( buffer() )
@@ -63,6 +75,30 @@ gulp.task( 'scripts', function()
 
     // Bundle
     bundle()
+})
+
+/**
+ * Scripts
+ */
+gulp.task( 'scriptsInit', function()
+{
+    bundlerInit = browserify( {
+        cache       : {},
+        packageCache: {},
+        entries     : '../app/sources/javascript/index.js',
+        debug       : true,
+        paths       : [ './node_modules', '../app/sources/javascript' ]
+    } )
+        .transform( 'babelify', { presets: [ 'babel-preset-es2015' ].map( require.resolve ) } )
+
+    // // Watch
+    // bundler.plugin( watchify )
+
+    // // Listen to bundler update
+    // bundler.on( 'update', bundle )
+
+    // Bundle
+    bundleInit()
 })
 
 /**
@@ -143,6 +179,12 @@ gulp.task('build', gulp.series (gulp.parallel('build-scripts', 'build-styles'),
                 title  : 'Gulp: build',
                 message: 'success'
             } ) )
+    }
+))
+
+gulp.task('init', gulp.series (gulp.parallel('styles', 'scriptsInit'),
+    function (done) {
+        // console.log(done)
     }
 ))
 
