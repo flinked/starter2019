@@ -26,6 +26,7 @@ const gulp         = require( 'gulp' ),
 /**
  * Scripts bundle
  */
+let bundler = null
 let bundlerInit = null
 
 const bundle = function()
