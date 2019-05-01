@@ -7,6 +7,6 @@ $context = Timber::context();
 $timber_post = new Timber\Post();
 $context['post'] = $timber_post;
 $context['foo'] = 'bar';
-$templates = array( 'views/pages/global/index.twig' );
+$templates = array( 'views/pages/sample/home.twig' );
 
   Timber::render( $templates, $context );
