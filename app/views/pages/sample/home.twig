@@ -1,0 +1,15 @@
+{% extends 'views/layout/base/base.twig' %}
+
+{% block content %}
+    {% include 'views/components/containerExemple.twig' 
+        with {
+            'data': {
+                'data': 'test'
+            },
+            'child': {
+                'child1': 'child1', 
+                'child2': 'child2'
+            }
+        } 
+    %}
+{% endblock %}
