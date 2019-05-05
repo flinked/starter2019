@@ -1,9 +1,0 @@
-{% if menu %}
-	<ul class="header__nav__container">
-	{% for item in menu %}
-		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" class="header__nav__link" href="{{ item.link }}">{{ item.title }}</a>
-		</li>
-	{% endfor %}
-	</ul>
-{% endif %}
