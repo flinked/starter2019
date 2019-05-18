@@ -132,6 +132,14 @@ function imageField(name) {
   return `{{ Image(post.meta('${name}')).src }}'`
 }
 
+function basicFieldRepeat(name) {
+  return `{{ item['${name}'] }}`
+}
+
+function imageFieldRepeat(name) {
+  return `{{ Image(item['${name}']).src }}'`
+}
+
 function relationField(name) {
   const field = `
   {% for post in Post( post.meta('${name}')) %}
@@ -157,10 +165,10 @@ function repaterField(name, sub_fields, folderObj, type) {
       await waitFor(50);
       if (child.type === 'image') {
         stackRepeat += `  {# field name : ${child.name}, field type : ${child.type} #}${os.EOL}`
-        stackRepeat += `  ${imageField(child.name)} ${os.EOL} ${os.EOL}`
+        stackRepeat += `  ${imageFieldRepeat(child.name)} ${os.EOL} ${os.EOL}`
       } else {
         stackRepeat += `  {# field name : ${child.name}, field type : ${child.type} #}${os.EOL}`
-        stackRepeat += `  ${basicField(child.name)} ${os.EOL} ${os.EOL}`
+        stackRepeat += `  ${basicFieldRepeat(child.name)} ${os.EOL} ${os.EOL}`
       }
     });
   
