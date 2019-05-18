@@ -1,5 +1,5 @@
 <?php
-function varDump($value, $text) {
+function dump($value, $text) {
     echo '<br>';
     echo $text ? : null;
     echo '<br>';
