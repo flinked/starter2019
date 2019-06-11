@@ -1,6 +1,7 @@
 {% extends 'views/layout/base/base.twig' %}
 
 {% block content %}
+    {{ function('dump', 'var dump de ma variable', 'ma variable' ) }}
     {% include 'views/components/containerExemple.twig' 
         with {
             'data': {
